@@ -1,4 +1,4 @@
-package multithread.management.information;
+package multithread.management.b_get_and_set_thread_info;
 
 public class Calculator implements Runnable {
 

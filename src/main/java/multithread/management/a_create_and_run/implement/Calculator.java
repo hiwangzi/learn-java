@@ -1,6 +1,6 @@
-package multithread.management.create.extend;
+package multithread.management.a_create_and_run.implement;
 
-public class Calculator extends Thread {
+public class Calculator implements Runnable {
 
     private int number;
 
