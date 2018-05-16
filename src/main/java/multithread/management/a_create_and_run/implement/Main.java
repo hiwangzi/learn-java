@@ -1,4 +1,4 @@
-package multithread.management.create.implement;
+package multithread.management.a_create_and_run.implement;
 
 public class Main {
 
