@@ -13,8 +13,7 @@ public class ReflectionTest {
             Class cl = Class.forName(className);
             Class superCl = cl.getSuperclass();
             String clModifier = Modifier.toString(cl.getModifiers());
-            System.out.println(clModifier + " " + cl.getName() + " extends " + superCl.getName());
-            System.out.println("{");
+            System.out.println(clModifier + " " + cl.getName() + " extends " + superCl.getName() + " {");
 
             printConstructors(cl);
             System.out.println();
@@ -34,7 +33,7 @@ public class ReflectionTest {
         Constructor[] constructors = cl.getConstructors();
         for (Constructor constructor : constructors) {
             String constructorModifier = Modifier.toString(constructor.getModifiers());
-            System.out.print(constructorModifier + " " + constructor.getName() + "(");
+            System.out.print("    " + constructorModifier + " " + constructor.getName() + "(");
             String parameterTypeStr = "";
             for (Class parameterType : constructor.getParameterTypes()) {
                 parameterTypeStr = parameterType.getName() + ", ";
@@ -42,7 +41,8 @@ public class ReflectionTest {
             if (constructor.getParameterTypes().length != 0) {
                 parameterTypeStr = parameterTypeStr.substring(0, parameterTypeStr.length() - 2);
             }
-            System.out.print(parameterTypeStr + ")\n");
+            System.out.print(parameterTypeStr + ")");
+            System.out.print(";\n");
         }
     }
 
@@ -50,7 +50,7 @@ public class ReflectionTest {
         Method[] methods = cl.getMethods();
         for (Method method : methods) {
             String methodModifier = Modifier.toString(method.getModifiers());
-            System.out.print(methodModifier + " " + method.getName() + "(");
+            System.out.print("    " + methodModifier + " " + method.getName() + "(");
             String parameterTypeStr = "";
             for (Class parameterType : method.getParameterTypes()) {
                 parameterTypeStr = parameterType.getName() + ", ";
@@ -58,7 +58,8 @@ public class ReflectionTest {
             if (method.getParameterTypes().length != 0) {
                 parameterTypeStr = parameterTypeStr.substring(0, parameterTypeStr.length() - 2);
             }
-            System.out.print(parameterTypeStr + ")\n");
+            System.out.print(parameterTypeStr + ")");
+            System.out.print(";\n");
         }
     }
 
@@ -66,7 +67,7 @@ public class ReflectionTest {
         Field[] fields = cl.getDeclaredFields();
         for (Field field : fields) {
             String fieldModifier = Modifier.toString(field.getModifiers());
-            System.out.println(fieldModifier + " " + field.getName());
+            System.out.println("    " + fieldModifier + " " + field.getName() + ";");
         }
     }
 }
