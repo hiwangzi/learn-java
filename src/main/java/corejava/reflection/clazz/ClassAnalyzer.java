@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 
 public class ClassAnalyzer {
 
-    public static void printConstructors(Class cl) {
+    public void printConstructors(Class cl) {
         Constructor[] constructors = cl.getConstructors();
         for (Constructor constructor : constructors) {
             String constructorModifier = Modifier.toString(constructor.getModifiers());
@@ -24,7 +24,7 @@ public class ClassAnalyzer {
         }
     }
 
-    public static void printMethods(Class cl) {
+    public void printMethods(Class cl) {
         Method[] methods = cl.getMethods();
         for (Method method : methods) {
             String methodModifier = Modifier.toString(method.getModifiers());
@@ -41,7 +41,7 @@ public class ClassAnalyzer {
         }
     }
 
-    public static void printFields(Class cl) {
+    public void printFields(Class cl) {
         Field[] fields = cl.getDeclaredFields();
         for (Field field : fields) {
             String fieldModifier = Modifier.toString(field.getModifiers());

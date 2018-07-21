@@ -4,6 +4,9 @@ import java.lang.reflect.Modifier;
 
 public class ClassAnalyzerTest {
     public static void main(String[] args) {
+
+        ClassAnalyzer classAnalyzer = new ClassAnalyzer();
+
         String className = "java.lang.Double";
 
         try {
@@ -12,13 +15,13 @@ public class ClassAnalyzerTest {
             String clModifier = Modifier.toString(cl.getModifiers());
             System.out.println(clModifier + " " + cl.getName() + " extends " + superCl.getName() + " {");
 
-            ClassAnalyzer.printConstructors(cl);
+            classAnalyzer.printConstructors(cl);
             System.out.println();
 
-            ClassAnalyzer.printMethods(cl);
+            classAnalyzer.printMethods(cl);
             System.out.println();
 
-            ClassAnalyzer.printFields(cl);
+            classAnalyzer.printFields(cl);
 
             System.out.println("}");
         } catch (ClassNotFoundException e) {
