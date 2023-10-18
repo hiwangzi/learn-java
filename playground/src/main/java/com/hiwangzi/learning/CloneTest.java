@@ -6,12 +6,12 @@ public class CloneTest {
     public static void main(String[] args) throws CloneNotSupportedException {
         Student alice = new Student("Alice");
         System.out.println(alice);
-        Student clone1 = alice.makeClone();
+        Student clone1 = alice.clone();
         System.out.println(clone1);
-        Student clone2 = clone1.clone();
-        System.out.println(clone2);
-        System.out.println(clone1 == clone2);
-        System.out.println(clone1.equals(clone2));
+//        Student clone2 = clone1.clone();
+//        System.out.println(clone2);
+//        System.out.println(clone1 == clone2);
+//        System.out.println(clone1.equals(clone2));
     }
 
     private static class Student implements Cloneable {
@@ -38,7 +38,7 @@ public class CloneTest {
         }
 
         @Override
-        protected Student clone() throws CloneNotSupportedException {
+        public Student clone() throws CloneNotSupportedException {
             return (Student) super.clone();
         }
 
