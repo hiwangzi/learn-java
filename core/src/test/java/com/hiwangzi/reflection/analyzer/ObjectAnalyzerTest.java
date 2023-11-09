@@ -1,4 +1,4 @@
-package reflection.analyzer;
+package com.hiwangzi.reflection.analyzer;
 
 import com.hiwangzi.reflection.analyzer.ObjectAnalyzer;
 import com.hiwangzi.reflection.bean.Employee;
