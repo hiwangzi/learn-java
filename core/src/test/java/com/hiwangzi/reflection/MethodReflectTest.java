@@ -1,4 +1,4 @@
-package reflection;
+package com.hiwangzi.reflection;
 
 import org.junit.jupiter.api.Test;
 

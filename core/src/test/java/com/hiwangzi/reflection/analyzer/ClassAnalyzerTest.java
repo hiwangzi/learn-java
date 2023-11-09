@@ -1,4 +1,4 @@
-package reflection.analyzer;
+package com.hiwangzi.reflection.analyzer;
 
 import com.hiwangzi.reflection.analyzer.ClassAnalyzer;
 import org.junit.jupiter.api.Test;
