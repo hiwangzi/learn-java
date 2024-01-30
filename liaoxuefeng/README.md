@@ -1,9 +1,10 @@
 学习 [廖雪峰Java教程](https://www.liaoxuefeng.com/wiki/1252599548343744) 中的一些实践代码与笔记。
 
-## [面向对象编程](https://www.liaoxuefeng.com/wiki/1252599548343744/1255943520012800)
+## [02. 面向对象编程](https://www.liaoxuefeng.com/wiki/1252599548343744/1255943520012800)
 
 * [class文件的版本](https://www.liaoxuefeng.com/wiki/1252599548343744/1476084948271136)
   * 每个版本的JVM，它能执行的class文件版本也不同。例如，Java 11对应的class文件版本是55，而Java 17对应的class文件版本是61。
+  * 查看class文件的版本：`javap -v Hello.class | grep version`
   * 指定编译输出有两种方式：
     * 一种是在javac命令行中用参数`--release`设置： `javac --release 11 Main.java`
     参数`--release 11`表示源码兼容Java 11，编译的class输出版本为Java 11兼容，即class版本55。
@@ -38,6 +39,7 @@
     # 通过打包出来的JRE运行模块
     jre/bin/java --module hello.world
     ```
+* [Java核心类](https://www.liaoxuefeng.com/wiki/1252599548343744/1260576204194144)——[实践代码](src/main/java/c02oop/javabase)
 
-## [网络编程](src/main/java/com/hiwangzi/c15_network)
-## [Web开发](src/main/java/com/hiwangzi/c20_web)
+## [15. 网络编程](src/main/java/com/hiwangzi/c15_network)
+## [20. Web开发](src/main/java/com/hiwangzi/c20_web)
