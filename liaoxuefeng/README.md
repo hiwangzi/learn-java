@@ -1,8 +1,8 @@
 学习 [廖雪峰Java教程](https://www.liaoxuefeng.com/wiki/1252599548343744) 中的一些实践代码与笔记。
 
-## [02. 面向对象编程](https://www.liaoxuefeng.com/wiki/1252599548343744/1255943520012800)
+## 02. 面向对象编程 [Reference](https://www.liaoxuefeng.com/wiki/1252599548343744/1255943520012800)
 
-* [class文件的版本](https://www.liaoxuefeng.com/wiki/1252599548343744/1476084948271136)
+* class文件的版本 [Reference](https://www.liaoxuefeng.com/wiki/1252599548343744/1476084948271136)
   * 每个版本的JVM，它能执行的class文件版本也不同。例如，Java 11对应的class文件版本是55，而Java 17对应的class文件版本是61。
   * 查看class文件的版本：`javap -v Hello.class | grep version`
   * 指定编译输出有两种方式：
@@ -23,23 +23,28 @@
     * 用低于Java 11的JVM运行`Hello`会得到一个`LinkageError`，因为无法加载Hello.class文件，而用Java 11运行`Hello`会得到一个`NoSuchMethodError`，因为`String.indent()`方法是从Java 12才添加进来的，Java 11的String版本根本没有`indent()`方法。 
     * 如果使用`--release 11`则会在编译时检查该方法是否在Java 11中存在。
     * 因此，如果运行时的JVM版本是Java 11，则编译时也最好使用Java 11，而不是用高版本的JDK编译输出低版本的class。
-* [模块化](https://www.liaoxuefeng.com/wiki/1252599548343744/1281795926523938)
+* 模块化 [Reference](https://www.liaoxuefeng.com/wiki/1252599548343744/1281795926523938) [实践代码](src/main/java/module-info.java)
     ```shell
     # 编译
     javac -d bin src/main/java/module-info.java src/main/java/c02oop/module1/*.java
+
     # 打包
     jar --create --file hello.jar --main-class c02oop.module1.Hello -C bin .
+
     # 转换jar为模块jmod
     jmod create --class-path hello.jar hello.jmod
+
     # 运行的两种方式
     java --module-path hello.jar --module learn.liaoxuefeng
     java -jar hello.jar
+
     # 打包JRE
     jlink --module-path hello.jmod --add-modules java.base,java.xml,learn.liaoxuefeng --output jre/
+
     # 通过打包出来的JRE运行模块
     jre/bin/java --module hello.world
     ```
-* [Java核心类](https://www.liaoxuefeng.com/wiki/1252599548343744/1260576204194144)——[实践代码](src/main/java/c02oop/javabase)
+* Java核心类 [Reference](https://www.liaoxuefeng.com/wiki/1252599548343744/1260576204194144) [实践代码](src/main/java/c02oop/javabase)
 
-## [15. 网络编程](src/main/java/com/hiwangzi/c15_network)
-## [20. Web开发](src/main/java/com/hiwangzi/c20_web)
+## 15. 网络编程 [实践代码](src/main/java/com/hiwangzi/c15_network)
+## 20. Web开发 [实践代码](src/main/java/com/hiwangzi/c20_web)
