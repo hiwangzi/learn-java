@@ -5,8 +5,14 @@
 mysql-mysql-connector-java = "8.0.28"
 org-junit-jupiter-junit-jupiter = "5.10.1"
 org-junit-jupiter-junit-jupiter-x1 = "5.8.2"
+slf4j-api = "1.7.32"
+logback-classic = "1.4.12"
+guava = "33.3.0-jre"
 
 [libraries]
 mysql-mysql-connector-java = { module = "mysql:mysql-connector-java", version.ref = "mysql-mysql-connector-java" }
 org-junit-jupiter-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "org-junit-jupiter-junit-jupiter" }
 org-junit-jupiter-junit-jupiter-x1 = { module = "org.junit.jupiter:junit-jupiter", version.ref = "org-junit-jupiter-junit-jupiter-x1" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j-api" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback-classic" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
