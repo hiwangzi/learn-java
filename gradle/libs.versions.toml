@@ -6,7 +6,7 @@ mysql-mysql-connector-java = "8.0.28"
 org-junit-jupiter-junit-jupiter = "5.10.1"
 org-junit-jupiter-junit-jupiter-x1 = "5.8.2"
 slf4j-api = "1.7.32"
-logback-classic = "1.4.12"
+logback-classic = "1.5.7"
 guava = "33.3.0-jre"
 
 [libraries]
