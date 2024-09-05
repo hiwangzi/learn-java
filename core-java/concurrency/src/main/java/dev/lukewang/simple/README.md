@@ -1,0 +1,1 @@
+简单的一个 `Runnable` 接口使用demo，通过 `Thread.interrupted()` 决定是否提前结束任务。
