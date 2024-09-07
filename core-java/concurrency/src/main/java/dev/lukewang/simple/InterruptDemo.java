@@ -1,4 +1,4 @@
-package dev.lukewang.thread;
+package dev.lukewang.simple;
 
 public class InterruptDemo {
     public static void main(String[] args) throws InterruptedException {
