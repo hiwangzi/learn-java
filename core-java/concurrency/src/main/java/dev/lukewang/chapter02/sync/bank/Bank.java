@@ -1,4 +1,4 @@
-package dev.lukewang.sync.bank;
+package dev.lukewang.chapter02.sync.bank;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

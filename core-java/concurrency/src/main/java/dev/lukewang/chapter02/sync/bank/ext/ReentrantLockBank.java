@@ -1,6 +1,6 @@
-package dev.lukewang.sync.bank.ext;
+package dev.lukewang.chapter02.sync.bank.ext;
 
-import dev.lukewang.sync.bank.Bank;
+import dev.lukewang.chapter02.sync.bank.Bank;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

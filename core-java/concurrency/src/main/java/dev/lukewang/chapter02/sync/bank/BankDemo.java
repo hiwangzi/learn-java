@@ -1,6 +1,8 @@
-package dev.lukewang.sync.bank;
+package dev.lukewang.chapter02.sync.bank;
 
-import dev.lukewang.sync.bank.ext.SynchronizedBank;
+import dev.lukewang.chapter02.sync.bank.ext.BadBank;
+import dev.lukewang.chapter02.sync.bank.ext.ReentrantLockBank;
+import dev.lukewang.chapter02.sync.bank.ext.SynchronizedBank;
 
 public class BankDemo {
 

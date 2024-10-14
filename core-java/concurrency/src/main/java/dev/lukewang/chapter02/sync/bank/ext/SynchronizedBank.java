@@ -1,6 +1,6 @@
-package dev.lukewang.sync.bank.ext;
+package dev.lukewang.chapter02.sync.bank.ext;
 
-import dev.lukewang.sync.bank.Bank;
+import dev.lukewang.chapter02.sync.bank.Bank;
 
 public class SynchronizedBank extends Bank {
 
@@ -13,10 +13,15 @@ public class SynchronizedBank extends Bank {
         while (accounts[from]< amount){
             wait();
         }
+
         log.info(Thread.currentThread().getName());
         accounts[from] -= amount;
         log.info("{} from {} to {}", amount, from, to);
         accounts[to] += amount;
+
+        // 在转账成功后调用 notifyAll()
+        notifyAll();
+
         log.info("Total Balance: {}", String.format("%.2f", this.getTotalBalance()));
     }
 }
