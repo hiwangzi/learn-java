@@ -1,4 +1,4 @@
-package dev.lukewang.simple;
+package dev.lukewang.interrupt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
