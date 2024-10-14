@@ -1,2 +1,2 @@
-* [RunnableDemo](./RunnableDemo.java) 和 [PrintTask](./PrintTask.java)：简单的一个 `Runnable` 接口使用demo，通过 `Thread.interrupted()` 决定是否提前结束任务。
-* [InterruptDemo](./InterruptDemo.java) 是另一个线程中判断是否被打断的例子。
+* [InterruptedDemo](./InterruptedDemo.java)：通过**静态**方法 `Thread.interrupted()` 决定是否提前结束任务，这种方式会复位打断状态。
+* [IsInterruptedDemo](./IsInterruptedDemo.java)：使用**对象**方法 `Thread.currentThread().isInterrupted()` 判断是否被打断，这种方式**不会**去复位打断状态。
